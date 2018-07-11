@@ -28,7 +28,7 @@ end
 def weather_report(weather)
 	weather.each {|city, description, temperature_farenheit|
 	return "The weather in #{weather[:city]} is #{weather[:description]}. The temperature is #{weather[:temperature]} degrees Farenheit."
-	
+
 	}
 end
 
