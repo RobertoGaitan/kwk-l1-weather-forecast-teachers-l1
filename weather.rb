@@ -9,14 +9,14 @@
 
 # 1. Complete the method below called location, that accepts a hash called weather as an argument so that it returns the value of city from the weather hash.
 def location(city_weather_info)
-	city_weather_info.each {|city, description, temp|
+	city_weather_info.each {|city|
 	return city_weather_info[:city]
 	}
 end
 
 # 2. Using the location method as a guide, write a  method called "description" so it returns the description from the weather hash.
 def description(city_weather_info)
-	city_weather_info.each {|city, description, temp|
+	city_weather_info.each {|city|
 	return city_weather_info[:description]
 	}
 end
@@ -26,8 +26,8 @@ end
 # not print it to the terminal.
 
 def weather_report(weather)
-	weather.each {|city, description, temperature_farenheit|
-	return "The weather in #{weather[:city]} is #{weather[:description]}. The temperature is #{weather[:temperature]} degrees Farenheit."
+	weather.each {|city|
+	return "The weather in #{weather[:city]} is #{weather[:description]}. The temperature is #{weather[:temperature_farenheit]} degrees Farenheit."
 
 	}
 end
@@ -38,8 +38,8 @@ end
 # `The city is New York.` `The description is Partly Cloudy.` `The temperature is 66.3.`
 
 def city_weather_info(city_weather_info)
-	city_weather_info.each {|city, description, temp|
-		"The #{city_weather_info[:city]}. The description is #{city_weather_info[:description]}. The temperature is #{city_weather_info[:temp]}."
+	city_weather_info.each {|city|
+		"The #{city_weather_info[:city]}. The description is #{city_weather_info[:description]}. The temperature is #{city_weather_info[:temperature_farenheit]}."
 	}
 end
 
@@ -48,8 +48,8 @@ end
 
 # Hint - how can we find the algorithm to convert Farenheit to Celsius?
 def convert_temp(city_weather_info)
-	city_weather_info.each {|city, description, temp|
-		temp_in_c = (city_weather_info[:temp] - 32)/9
+	city_weather_info.each {|city|
+		temp_in_c = (city_weather_info[:temperature_farenheit] - 32)/9
 		return (temp_in_c.round(2))
 
 	}
