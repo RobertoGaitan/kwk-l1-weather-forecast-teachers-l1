@@ -25,10 +25,10 @@ end
 # for example: "The weather in New York is Partly Cloudy. The temperature is 66.1 degrees Farenheit." HINT: the method should RETURN the string,
 # not print it to the terminal.
 
-def weather_report(city_weather_info)
-	city_weather_info.each {|city, description, temperature_farenheit|
-	return "The weather in #{city_weather_info[:city]} is #{city_weather_info[:description]}. The temperature is #{city_weather_info[:temperature]} degrees Farenheit."
-	puts city_weather_info.each[:temperature_farenheit]
+def weather_report(weather)
+	weather.each {|city, description, temperature_farenheit|
+	return "The weather in #{weather[:city]} is #{weather[:description]}. The temperature is #{weather[:temperature]} degrees Farenheit."
+	
 	}
 end
 
