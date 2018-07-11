@@ -49,8 +49,8 @@ end
 # Hint - how can we find the algorithm to convert Farenheit to Celsius?
 def convert_temp(city_weather_info)
 	city_weather_info.each {|city, description, temp|
-		temp_in_c = (city_weather_info[:temp] - 32) * 0.5555814
-		return (Integer(temp_in_c * 100) / Float(100))
+		temp_in_c = (city_weather_info[:temp] - 32)/9
+		return (temp_in_c.round(2)
 
 	}
 end
