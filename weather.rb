@@ -50,7 +50,7 @@ end
 def convert_temp(city_weather_info)
 	city_weather_info.each {|city, description, temp|
 		temp_in_c = (city_weather_info[:temp] - 32)/9
-		return (temp_in_c.round(2)
+		return (temp_in_c.round(2))
 
 	}
 end
