@@ -17,7 +17,7 @@ end
 # 2. Using the location method as a guide, write a  method called "description" so it returns the description from the weather hash.
 def description(city_weather_info)
 	city_weather_info.each {|city, description, temp|
-	city_weather_info[:description]
+	return city_weather_info[:description]
 	}
 end
 
